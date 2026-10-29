@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">CER 骨架筆記論證結構</text>
+
+  <!-- Claim -->
+  <rect x="60" y="75" width="480" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="90" y="115" font-size="18" font-weight="bold" fill="#1e40af">C (Claim 主張)</text>
+  <text x="240" y="115" font-size="14" fill="#1e40af">回答核心問題的直接結論或核心觀點</text>
+
+  <!-- Evidence -->
+  <rect x="60" y="160" width="480" height="70" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="90" y="200" font-size="18" font-weight="bold" fill="#92400e">E (Evidence 證據)</text>
+  <text x="240" y="200" font-size="14" fill="#92400e">支撐主張的具體數據、實驗觀察或客觀事實</text>
+
+  <!-- Reasoning -->
+  <rect x="60" y="245" width="480" height="70" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+  <text x="90" y="285" font-size="18" font-weight="bold" fill="#065f46">R (Reasoning 推理)</text>
+  <text x="240" y="285" font-size="14" fill="#065f46">運用科學原理或邏輯法則，連結證據與主張的論證鏈</text>
+</svg>

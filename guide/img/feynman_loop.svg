@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">費曼輸出法：學習閉環圖</text>
+  
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="220" height="90" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">1. 大白話講解</text>
+  <text x="160" y="145" text-anchor="middle" font-size="13" fill="#3b82f6">想像講給完全不懂的人聽</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 270 125 L 320 125" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Step 2 -->
+  <rect x="330" y="80" width="220" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">2. 發現知識卡點</text>
+  <text x="440" y="145" text-anchor="middle" font-size="13" fill="#b45309">哪裡講不順、依賴專有名詞</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 440 170 L 440 210" stroke="#94a3b8" stroke-width="3" fill="none"/>
+
+  <!-- Step 3 -->
+  <rect x="330" y="220" width="220" height="90" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="440" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">3. 回頭查閱與修補</text>
+  <text x="440" y="285" text-anchor="middle" font-size="13" fill="#047857">查教材、AI 輔助精準補漏</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 330 265 L 280 265" stroke="#94a3b8" stroke-width="3" fill="none"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="220" width="220" height="90" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="160" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#6b21a8">4. 簡化與類比昇華</text>
+  <text x="160" y="285" text-anchor="middle" font-size="13" fill="#7e22ce">提煉為閃卡、形成長時記憶</text>
+
+  <!-- Arrow 4 to 1 -->
+  <path d="M 160 220 L 160 180" stroke="#94a3b8" stroke-width="3" fill="none"/>
+</svg>

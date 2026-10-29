@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">AI 雙軌模式架構：官方代理 vs 自備金鑰</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">隨時一鍵切換 ‧ 歷史紀錄與學習進度完整保留 ‧ 互不覆蓋</text>
+
+  <!-- 官方點數代理 (方案 A) -->
+  <rect x="35" y="85" width="235" height="235" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="152" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1d4ed8">方案 A：官方點數代理</text>
+  <rect x="48" y="130" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="153" font-size="12" fill="#1e40af">⚡ 免申請金鑰，開箱即用</text>
+  <rect x="48" y="174" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="197" font-size="12" fill="#1e40af">💳 雙平台 IAP 內購點數包</text>
+  <rect x="48" y="218" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="241" font-size="12" fill="#1e40af">📊 按字扣抵，點數永不過期</text>
+  <rect x="48" y="262" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="285" font-size="12" fill="#1e40af">🔒 帳號綁定，雲端餘額保護</text>
+
+  <!-- 中央切換控制與雙向箭頭 -->
+  <path d="M 276 135 L 324 135 M 284 130 L 276 135 L 284 140 M 316 130 L 324 135 L 316 140" stroke="#64748b" stroke-width="2" fill="none"/>
+  <rect x="282" y="155" width="36" height="66" rx="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="300" cy="173" r="13" fill="#3b82f6"/>
+  <text x="300" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">雙軌切換</text>
+  <text x="300" y="265" text-anchor="middle" font-size="11" fill="#64748b">原位切換</text>
+
+  <!-- 自備金鑰 BYOK (方案 B) -->
+  <rect x="330" y="85" width="235" height="235" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="447" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#b45309">方案 B：自備金鑰 (BYOK)</text>
+  <rect x="343" y="130" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="153" font-size="12" fill="#92400e">🔑 直連 Google AI / OpenAI</text>
+  <rect x="343" y="174" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="197" font-size="12" fill="#92400e">🛡️ 本地安全儲存，金鑰不經伺服器</text>
+  <rect x="343" y="218" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="241" font-size="12" fill="#92400e">🎚️ 每月預算滑桿守護防爆衝</text>
+  <rect x="343" y="262" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="285" font-size="12" fill="#92400e">🆓 善用官方免費 Token 額度</text>
+
+  <!-- 底部保證標籤 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">✅ 切換時原設定與額度安全留存，資料不互刪</text>
+</svg>

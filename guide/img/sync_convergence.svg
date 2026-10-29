@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">自訂牌組雙向 Outbox 同步與雲端收斂</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">離線優先 ‧ 本地即時操作 ‧ 雲端精確裁決 ‧ 記憶權重 100% 留存</text>
+
+  <!-- 裝置 A (手機離線背卡) -->
+  <rect x="30" y="85" width="160" height="225" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="30" y="85" width="160" height="42" rx="10" fill="#dbeafe"/>
+  <text x="110" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">裝置 A (手機端)</text>
+  <text x="40" y="150" font-size="12" fill="#1e3a8a">📱 離線背卡複習</text>
+  <text x="50" y="170" font-size="11" fill="#475569">通勤無網路隨開隨背</text>
+  <text x="40" y="198" font-size="12" fill="#1e3a8a">📦 本地 Outbox 佇列</text>
+  <text x="50" y="218" font-size="11" fill="#475569">記錄 SM-2 熟練度評分</text>
+  <text x="40" y="246" font-size="12" fill="#1e3a8a">📶 連網背景推送</text>
+  <text x="50" y="266" font-size="11" fill="#475569">零等待、自動批次上傳</text>
+
+  <!-- 左至中 箭頭 -->
+  <path d="M 193 195 L 206 195 M 200 189 L 206 195 L 200 201" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+
+  <!-- 中央：Supabase 雲端收斂中心 -->
+  <rect x="210" y="85" width="180" height="225" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="210" y="85" width="180" height="42" rx="10" fill="#dcfce7"/>
+  <text x="300" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">Supabase 雲端收斂</text>
+  
+  <rect x="220" y="137" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="156" font-size="11" font-weight="bold" fill="#15803d">🧠 記憶權重 100% 留存</text>
+  <text x="228" y="173" font-size="10" fill="#475569">不同裝置複習評分完整合併</text>
+
+  <rect x="220" y="193" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="212" font-size="11" font-weight="bold" fill="#15803d">✍️ 卡片內容最新獲勝</text>
+  <text x="228" y="229" font-size="10" fill="#475569">以更新時間戳精確裁決內容</text>
+
+  <rect x="220" y="249" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="268" font-size="11" font-weight="bold" fill="#15803d">🏷️ 標籤軟刪除保護</text>
+  <text x="228" y="285" font-size="10" fill="#475569">防止孤兒卡片與解綁遺失</text>
+
+  <!-- 右至中 箭頭 -->
+  <path d="M 407 195 L 394 195 M 400 189 L 394 195 L 400 201" stroke="#d97706" stroke-width="2.5" fill="none"/>
+
+  <!-- 裝置 B (平板修改卡片) -->
+  <rect x="410" y="85" width="160" height="225" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <rect x="410" y="85" width="160" height="42" rx="10" fill="#fef3c7"/>
+  <text x="490" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">裝置 B (平板/電腦)</text>
+  <text x="420" y="150" font-size="12" fill="#78350f">📖 離線編輯牌組</text>
+  <text x="430" y="170" font-size="11" fill="#475569">書桌前擴充整理卡片</text>
+  <text x="420" y="198" font-size="12" fill="#78350f">📦 本地 Outbox 佇列</text>
+  <text x="430" y="218" font-size="11" fill="#475569">記錄新增/修改/刪除操作</text>
+  <text x="420" y="246" font-size="12" fill="#78350f">📶 連網差量更新</text>
+  <text x="430" y="266" font-size="11" fill="#475569">拉取最新進度、合併衝突</text>
+
+  <!-- 底部說明 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">✅ 真正跨裝置無縫切換：在公車上背卡、回書桌前編輯，進度完全同步</text>
+</svg>
