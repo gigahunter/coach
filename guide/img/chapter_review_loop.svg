@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">108 課綱章節複習：三閉環學習導流</text>
+  <text x="300" y="58" text-anchor="middle" font-size="13" fill="#64748b">章節重點閱讀 ➔ 三大閉環實踐 ➔ 沉澱為自訂牌組閃卡納入長時記憶</text>
+
+  <!-- 頂部卡片：章節核心重點閱讀 -->
+  <rect x="180" y="75" width="240" height="56" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="300" y="99" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b21b6">📖 章節核心重點閱讀</text>
+  <text x="300" y="119" text-anchor="middle" font-size="12" fill="#6d28d9">五大分區精要講義 ‧ 兩段式互動心法</text>
+
+  <!-- 分岔箭頭向下 -->
+  <path d="M 300 131 L 300 148 M 125 148 L 475 148 M 125 148 L 125 160 M 300 148 L 300 160 M 475 148 L 475 160" stroke="#94a3b8" stroke-width="2" fill="none"/>
+
+  <!-- 閉環 1：以教代學總結 -->
+  <rect x="35" y="160" width="175" height="88" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="122" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">✍️ 以教代學總結</text>
+  <text x="122" y="208" text-anchor="middle" font-size="12" fill="#1d4ed8">大白話費曼輸出論述</text>
+  <rect x="50" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="122" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">AI 批改 ‧ 點數/金鑰</text>
+
+  <!-- 閉環 2：蘇格拉底深度追問 -->
+  <rect x="212" y="160" width="175" height="88" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">💬 蘇格拉底深度追問</text>
+  <text x="300" y="208" text-anchor="middle" font-size="12" fill="#b45309">對話式辨析觀念盲點</text>
+  <rect x="227" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="300" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">AI 追問 ‧ 點數/金鑰</text>
+
+  <!-- 閉環 3：章節練習 -->
+  <rect x="390" y="160" width="175" height="88" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="477" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">🎯 章節練習</text>
+  <text x="477" y="208" text-anchor="middle" font-size="12" fill="#047857">定向 10 題核心精選</text>
+  <rect x="405" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="477" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">本機離線可用 ‧ 零門檻</text>
+
+  <!-- 收斂箭頭向下 -->
+  <path d="M 125 248 L 125 260 M 300 248 L 300 260 M 475 248 L 475 260 M 125 260 L 475 260 M 300 260 L 300 273" stroke="#94a3b8" stroke-width="2" fill="none"/>
+
+  <!-- 底部卡片：沉澱為自訂牌組閃卡 -->
+  <rect x="130" y="275" width="340" height="54" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="300" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">🗂️ 沉澱為自訂牌組閃卡 ‧ 納入 SM-2 排程</text>
+  <text x="300" y="318" text-anchor="middle" font-size="12" fill="#475569">一鍵收斂頓悟精華 ‧ 動態間隔重複長效記憶</text>
+</svg>

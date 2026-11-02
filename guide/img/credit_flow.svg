@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">微美金點數全生命週期：儲值、留存與扣抵</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">1 點 ＝ $0.001 美元 ‧ 永不過期 ‧ 用多少扣多少</text>
+
+  <!-- 階段一：IAP 儲值購買 -->
+  <rect x="25" y="85" width="160" height="225" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="25" y="85" width="160" height="42" rx="10" fill="#dbeafe"/>
+  <text x="105" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">1. 雙平台 IAP 儲值</text>
+  
+  <text x="35" y="150" font-size="12" fill="#1e3a8a">📱 雙平台正規內購</text>
+  <text x="45" y="170" font-size="11" fill="#475569">Apple App Store</text>
+  <text x="45" y="188" font-size="11" fill="#475569">Google Play 商店</text>
+  <text x="35" y="215" font-size="12" fill="#1e3a8a">📦 三種點數包規格</text>
+  <text x="45" y="235" font-size="11" fill="#475569">300 / 800 / 2000 點</text>
+  <text x="35" y="262" font-size="12" fill="#1e3a8a">🏪 多元便利付款</text>
+  <text x="45" y="282" font-size="11" fill="#475569">支援超商/信用卡/電信</text>
+
+  <!-- 流程箭頭 1 -->
+  <path d="M 192 195 L 213 195 M 206 189 L 213 195 L 206 201" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+
+  <!-- 階段二：微美金帳本 -->
+  <rect x="220" y="85" width="160" height="225" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="220" y="85" width="160" height="42" rx="10" fill="#dcfce7"/>
+  <text x="300" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">2. 微美金安全帳本</text>
+  
+  <text x="230" y="150" font-size="12" fill="#14532d">💎 點數永不過期</text>
+  <text x="240" y="170" font-size="11" fill="#475569">零月租、零期限壓力</text>
+  <text x="230" y="198" font-size="12" fill="#14532d">⚖️ 精確整數記帳</text>
+  <text x="240" y="218" font-size="11" fill="#475569">無浮點誤差 (64-bit)</text>
+  <text x="240" y="236" font-size="11" fill="#475569">1 點 ＝ 0.001 美元</text>
+  <text x="230" y="262" font-size="12" fill="#14532d">🛡️ 雲端帳號保護</text>
+  <text x="240" y="282" font-size="11" fill="#475569">換手機登入立即還原</text>
+
+  <!-- 流程箭頭 2 -->
+  <path d="M 387 195 L 408 195 M 401 189 L 408 195 L 401 201" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+
+  <!-- 階段三：AI 微扣抵 -->
+  <rect x="415" y="85" width="160" height="225" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <rect x="415" y="85" width="160" height="42" rx="10" fill="#fef3c7"/>
+  <text x="495" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">3. AI 批改微扣抵</text>
+  
+  <text x="425" y="150" font-size="12" fill="#78350f">🎯 用多少扣多少</text>
+  <text x="435" y="170" font-size="11" fill="#475569">費曼總結批改與追問</text>
+  <text x="435" y="188" font-size="11" fill="#475569">每次約 0.5 ~ 3 點</text>
+  <text x="425" y="215" font-size="12" fill="#78350f">💰 極低花費無負擔</text>
+  <text x="435" y="235" font-size="11" fill="#475569">折合每次僅 NT$ 0.02</text>
+  <text x="425" y="262" font-size="12" fill="#78350f">📝 餘額保護機制</text>
+  <text x="435" y="282" font-size="11" fill="#475569">點數不足草稿不遺失</text>
+
+  <!-- 底部說明 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">💡 透明對帳：隨時於「AI 設定」查看即時餘額膠囊與完整交易明細</text>
+</svg>

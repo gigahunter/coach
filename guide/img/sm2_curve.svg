@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">SM-2 間隔重複記憶曲線</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="300" x2="550" y2="300" stroke="#64748b" stroke-width="2"/>
+  <line x1="60" y1="300" x2="60" y2="70" stroke="#64748b" stroke-width="2"/>
+  <text x="540" y="325" font-size="13" fill="#64748b">時間</text>
+  <text x="45" y="80" font-size="13" fill="#64748b">記憶率</text>
+
+  <!-- Curve 1 (no review) -->
+  <path d="M 60 100 Q 120 280 200 295" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" fill="none"/>
+  <text x="140" y="270" font-size="12" fill="#ef4444">未複習（迅速遺忘）</text>
+
+  <!-- Review 1 -->
+  <path d="M 60 100 Q 100 220 130 230" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="130" y1="230" x2="130" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="130" cy="100" r="4" fill="#10b981"/>
+  <text x="130" y="90" font-size="12" text-anchor="middle" fill="#047857">第 1 次複習</text>
+
+  <!-- Review 2 -->
+  <path d="M 130 100 Q 190 200 240 210" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="240" y1="210" x2="240" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="240" cy="100" r="4" fill="#10b981"/>
+  <text x="240" y="90" font-size="12" text-anchor="middle" fill="#047857">第 2 次複習</text>
+
+  <!-- Review 3 -->
+  <path d="M 240 100 Q 330 180 400 190" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="400" y1="190" x2="400" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="400" cy="100" r="4" fill="#10b981"/>
+  <text x="400" y="90" font-size="12" text-anchor="middle" fill="#047857">第 3 次複習</text>
+
+  <!-- Flat stable curve -->
+  <path d="M 400 100 Q 480 130 540 135" stroke="#059669" stroke-width="3" fill="none"/>
+  <text x="480" y="160" font-size="13" font-weight="bold" fill="#065f46">進入長時穩定記憶</text>
+</svg>

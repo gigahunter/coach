@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<!-- 本檔由 tool/build_user_guide.dart 產生，勿手改 -->
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學測教練｜雙軌操作教學手冊與學習法實踐指引</title>
+  <meta property="og:title" content="學測教練｜雙軌操作教學手冊與學習法實踐指引">
+  <meta property="og:description" content="費曼輸出、CER 骨架筆記、SM-2 閃卡複習與蘇格拉底追問完整實踐攻略">
+  <meta property="og:type" content="article">
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --callout-tip-bg: #f0fdf4;
+      --callout-tip-fg: #14532d;
+      --callout-tip-border: #16a34a;
+      --callout-warning-bg: #fffbeb;
+      --callout-warning-fg: #78350f;
+      --callout-warning-border: #f59e0b;
+      --callout-important-bg: #eff6ff;
+      --callout-important-fg: #1e3a8a;
+      --callout-important-border: #3b82f6;
+      --callout-parent-bg: #faf5ff;
+      --callout-parent-fg: #581c87;
+      --callout-parent-border: #a855f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #60a5fa;
+        --primary-hover: #93c5fd;
+        --text-main: #f8fafc;
+        --text-muted: #cbd5e1;
+        --bg-page: #0f172a;
+        --bg-card: #1e293b;
+        --border: #334155;
+        --callout-tip-bg: #052e16;
+        --callout-tip-fg: #bbf7d0;
+        --callout-tip-border: #22c55e;
+        --callout-warning-bg: #451a03;
+        --callout-warning-fg: #fde68a;
+        --callout-warning-border: #f59e0b;
+        --callout-important-bg: #172554;
+        --callout-important-fg: #bfdbfe;
+        --callout-important-border: #60a5fa;
+        --callout-parent-bg: #3b0764;
+        --callout-parent-fg: #e9d5ff;
+        --callout-parent-border: #c084fc;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+      line-height: 1.72;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      margin: 0;
+      padding: 24px 16px;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 40px 32px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      font-size: 28px;
+      line-height: 1.35;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--text-main);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      color: var(--text-main);
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      scroll-margin-top: 80px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    p, li {
+      color: var(--text-main);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: var(--primary-hover);
+    }
+    .toc {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 28px 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .toc-title {
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    .toc ul {
+      margin: 0;
+      padding-left: 20px;
+      column-count: 2;
+      column-gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .toc ul {
+        column-count: 1;
+      }
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--border);
+      background: var(--bg-page);
+    }
+    .callout p {
+      margin: 6px 0;
+    }
+    .callout p:first-child {
+      margin-top: 0;
+    }
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+    .callout-tip {
+      background: var(--callout-tip-bg);
+      border-left-color: var(--callout-tip-border);
+      color: var(--callout-tip-fg);
+    }
+    .callout-tip p, .callout-tip strong {
+      color: var(--callout-tip-fg);
+    }
+    .callout-warning {
+      background: var(--callout-warning-bg);
+      border-left-color: var(--callout-warning-border);
+      color: var(--callout-warning-fg);
+    }
+    .callout-warning p, .callout-warning strong {
+      color: var(--callout-warning-fg);
+    }
+    .callout-important {
+      background: var(--callout-important-bg);
+      border-left-color: var(--callout-important-border);
+      color: var(--callout-important-fg);
+    }
+    .callout-important p, .callout-important strong {
+      color: var(--callout-important-fg);
+    }
+    .callout-parent {
+      background: var(--callout-parent-bg);
+      border-left-color: var(--callout-parent-border);
+      color: var(--callout-parent-fg);
+    }
+    .callout-parent p, .callout-parent strong {
+      color: var(--callout-parent-fg);
+    }
+    .concept-diagram {
+      margin: 28px 0;
+      text-align: center;
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .concept-diagram svg, .concept-diagram img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+    .concept-diagram figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    math {
+      font-size: 1.1em;
+      color: var(--text-main);
+    }
+    math[display="block"] {
+      display: block;
+      margin: 16px 0;
+      overflow-x: auto;
+      padding: 8px 0;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+<h1>學測教練雙軌操作教學手冊與學習法實踐指引</h1>
+<ul>
+<li>適用版本: v2.1</li>
+<li>最後更新: 2026-10-29</li>
+</ul>
+<p>歡迎使用學測教練！本手冊專為高中學測生與陪伴家長量身打造，將科學學習法（費曼輸出、CER 骨架筆記、SM-2 間隔重複、蘇格拉底追問）深度融入每日備考歷程，協助你從被動死記轉向主動建構。</p>
+    <nav class="toc" aria-label="章節目錄">
+      <div class="toc-title">📖 本頁章節快速導覽</div>
+      <ul>
+      <li><a href="#section-1">1. 開始使用</a></li>
+      <li><a href="#section-2">2. 費曼輸出法</a></li>
+      <li><a href="#section-3">3. CER 骨架筆記</a></li>
+      <li><a href="#section-4">4. SM-2 閃卡複習</a></li>
+      <li><a href="#section-5">5. 蘇格拉底追問</a></li>
+      <li><a href="#section-6">6. 練習與題庫實戰</a></li>
+      <li><a href="#section-7">7. 家長設定輔助</a></li>
+      <li><a href="#section-8">8. 點數與雙軌模式</a></li>
+      <li><a href="#section-9">9. 自訂牌組雲端同步與備份</a></li>
+      <li><a href="#section-10">10. 離線同步與資料安全</a></li>
+      <li><a href="#section-11">11. 常見 Q&A</a></li>
+      <li><a href="#section-12">12. 108 課綱章節複習導覽</a></li>
+      <li><a href="#section-13">13. Web Admin 題庫與課綱管理</a></li>
+      </ul>
+    </nav>
+
+<hr />
+<h2 id="section-1">1. 開始使用</h2>
+<h3>1.1 核心設計哲學：學長姐帶你用</h3>
+<p>學測備考不是比誰刷的題目多，而是比誰的知識漏洞補得扎實。學測教練以「主動回想」與「反思輸出」為核心架構：</p>
+<ol>
+<li><strong>先嘗試輸出，再尋求解答</strong>：遇到問題先用自己的話說一次，AI 會針對你的盲點進行引導，而不是直接餵給你答案。</li>
+<li><strong>所有學習足跡全本機優先</strong>：你的錯題、筆記與閃卡皆安全存放在本機，離線隨時可讀，隨時可複習。</li>
+</ol>
+<h3>1.2 三分鐘界面導覽</h3>
+<ul>
+<li><strong>今日指引（首頁）</strong>：開啟 App 即可看到今日待複習的閃卡隊列、進行中的費曼挑戰與推薦題目。</li>
+<li><strong>題庫練習</strong>：涵蓋國文、英文、數學 A、數學 B、社會、自然全科 108 課綱題庫，支援章節挑題與循序刷題，並具備雲端題庫差量更新。</li>
+<li><strong>章節複習</strong>：依 108 課綱樹狀單元系統性整理核心概念與考點，支援一鍵發起學習閉環，詳見 <a href="#section-12">108 課綱章節複習導覽</a>。</li>
+<li><strong>錯題本與復盤</strong>：練習作錯的題目會自動匯入錯題本，支援非選自評、錯誤標籤與一鍵轉化為閃卡。</li>
+<li><strong>閃卡複習與自訂牌組</strong>：基於 SM-2 間隔重複演算法，每日精準排程複習，支援跨裝置 <a href="#section-9">自訂牌組雲端同步與備份</a>。</li>
+<li><strong>設定與說明中心</strong>：管理你的個人偏好、匯出資料、本機安全抹除，切換 <a href="#section-8">點數與雙軌模式</a>，並隨時查閱本手冊與 <a href="#section-7">家長設定指南</a>。</li>
+</ul>
+<h4>首頁操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="今日複習首頁介面"><img src="img/ui_home_shell.png" alt="今日複習首頁介面" loading="lazy" /><figcaption>今日複習首頁介面</figcaption></figure></p>
+<ul>
+<li><strong>① 學測倒數與連續打卡</strong>：頂部卡片即時呈現考前天數（如「88 天」）與連續登入打卡天數（如「7 天不中斷」）。</li>
+<li><strong>② 今日到期複習任務</strong>：由 SM-2 演算法自動排程的今日到期複習隊列（如「閃卡 5 張 ＋ 錯題 3 題」），點擊一鍵開始複習。</li>
+<li><strong>③ 讀書計畫進度追蹤</strong>：視覺化進度條顯示當日科目練習量（如「數學 A 向量單元：8 / 10 題」），即時連動費曼與筆記進度。</li>
+<li><strong>④ 雙軌教學手冊常駐卡</strong>：首頁底部常駐入口，點擊可隨時開啟全套學習法實踐指引。</li>
+</ul>
+<div class="callout callout-tip" role="note">
+
+<p><strong>💡 提示</strong>
+首次安裝後，你可以直接進入訪客模式使用全科離線題庫與基礎練習；若需使用 AI 智能批改與追問功能，可自由選擇切換至開箱即用的 <a href="#section-8">官方點數代理</a>，或由家長/自己在設定中配置 <a href="#section-7">自備金鑰</a>。</p>
+
+</div>
+<hr />
+<h2 id="section-2">2. 費曼輸出法</h2>
+<h3>2.1 為什麼要用費曼輸出法</h3>
+<p>諾貝爾物理學獎得主理查·費曼（Richard Feynman）曾說：「如果你無法用大白話向一個外行人解釋清楚一個概念，就代表你還沒真正搞懂它。」
+在學測中，許多同學以為自己看懂了詳解，但換個包裝的素養題就卡關。費曼輸出法強制你將思維具體化，透過「自我檢測知識卡點」實現高效率閉環。</p>
+<h3>2.2 三步驟實操流程</h3>
+<ol>
+<li><strong>選擇核心概念並錄音/打字</strong>：挑選一個你不熟悉的考點（例如：光合作用光反應、牛頓第二運動定律、克卜勒第三行星定律），點擊「費曼輸出」，用自己的話解釋給國中生聽。</li>
+<li><strong>AI 即時診斷與對比</strong>：AI 依據課綱標準架構進行語意比對，指出你遺漏的關鍵因果邏輯或專有名詞混淆處。</li>
+<li><strong>針對漏洞修補並沉澱</strong>：依據診斷回饋重新修正你的解釋，驗證無誤後一鍵將關鍵概念提煉為閃卡。</li>
+</ol>
+<h3>2.3 真實示例</h3>
+<p>以高中物理「克卜勒第三運動定律」為例：
+你的大白話輸出：「只要是繞同一個恆星旋轉的行星，軌道越大的，繞一圈需要的時間就越長，而且長度立方和時間平方的比值是一個固定常數。」</p>
+<p>數學公式對照：
+<math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><msup><mi>R</mi><mn class="tml-med-pad">3</mn></msup><msup><mi>T</mi><mn class="tml-med-pad">2</mn></msup></mfrac><mo>=</mo><mi>K</mi></mrow></math></p>
+<p>其中 <math><mi>R</mi></math> 為軌道半長軸，<math><mi>T</mi></math> 為公轉週期，<math><mi>K</mi></math> 為僅與中心天體質量有關的常數。</p>
+<p><figure class="concept-diagram" role="img" aria-label="費曼閉環"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">費曼輸出法：學習閉環圖</text>
+  
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="220" height="90" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">1. 大白話講解</text>
+  <text x="160" y="145" text-anchor="middle" font-size="13" fill="#3b82f6">想像講給完全不懂的人聽</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 270 125 L 320 125" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Step 2 -->
+  <rect x="330" y="80" width="220" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">2. 發現知識卡點</text>
+  <text x="440" y="145" text-anchor="middle" font-size="13" fill="#b45309">哪裡講不順、依賴專有名詞</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 440 170 L 440 210" stroke="#94a3b8" stroke-width="3" fill="none"/>
+
+  <!-- Step 3 -->
+  <rect x="330" y="220" width="220" height="90" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="440" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">3. 回頭查閱與修補</text>
+  <text x="440" y="285" text-anchor="middle" font-size="13" fill="#047857">查教材、AI 輔助精準補漏</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 330 265 L 280 265" stroke="#94a3b8" stroke-width="3" fill="none"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="220" width="220" height="90" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="160" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="#6b21a8">4. 簡化與類比昇華</text>
+  <text x="160" y="285" text-anchor="middle" font-size="13" fill="#7e22ce">提煉為閃卡、形成長時記憶</text>
+
+  <!-- Arrow 4 to 1 -->
+  <path d="M 160 220 L 160 180" stroke="#94a3b8" stroke-width="3" fill="none"/>
+</svg><figcaption>費曼閉環</figcaption></figure></p>
+<h4>費曼輸出操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="費曼輸出與批改介面"><img src="img/ui_feynman_output.png" alt="費曼輸出與批改介面" loading="lazy" /><figcaption>費曼輸出與批改介面</figcaption></figure></p>
+<ul>
+<li><strong>示範題目</strong>：高中物理【克卜勒第三行星運動定律】核心概念詮釋。</li>
+<li><strong>① 大白話錄音與文字輸入</strong>：學生以白話文解釋概念，支援麥克風語音辨識與打字輸入。</li>
+<li><strong>② AI 語意盲點診斷</strong>：AI 比對課綱核心概念，指出關鍵邏輯缺漏（如「未提及中心天體質量限制」）。</li>
+<li><strong>③ 一鍵轉化閃卡</strong>：診斷確認後，點擊按鈕直接將精準公式與反思結論轉化為 SM-2 閃卡。</li>
+</ul>
+<h3>2.4 常見錯誤對照表</h3>
+<table>
+<thead>
+<tr>
+<th align="left">常見錯誤盲點</th>
+<th align="left">典型錯誤表現</th>
+<th align="left">正確作法與費曼心法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>死記硬背專有名詞</strong></td>
+<td align="left">只是把課本定義背出來，無法用日常情境打比方</td>
+<td align="left">想像自己在教小學弟妹，嘗試用生活例子解釋機制</td>
+</tr>
+<tr>
+<td align="left"><strong>跳過推導直接看結論</strong></td>
+<td align="left">只記公式代數字，題目條件微調便不知所措</td>
+<td align="left">說明公式背後成立的「前提假設」與因果邏輯</td>
+</tr>
+<tr>
+<td align="left"><strong>自我感覺良好</strong></td>
+<td align="left">以為看懂詳解就是懂了，缺乏自我輸出檢驗</td>
+<td align="left">蓋上書本與筆記，完整說出核心關鍵推論鏈</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning" role="note">
+
+<p><strong>⚠️ 注意</strong>
+避免過度依賴 AI 修正：AI 的反饋是幫助你找出「講不順的地方」，千萬不要直接複製 AI 給你的修訂範本，必須自己重新用大白話梳理一次才有學習效果。</p>
+
+</div>
+<h3>2.5 本週挑戰</h3>
+<p>挑選一個你最容易混淆的歷史因果事件或化學平衡原理，進行一次費曼輸出，直到 AI 判定概念完整度達 85% 以上！</p>
+<hr />
+<h2 id="section-3">3. CER 骨架筆記</h2>
+<h3>3.1 為什麼要用 CER 骨架筆記</h3>
+<p>在大考素養導向命題下，非選擇題、探究與實作題大幅增加。許多同學並非不懂觀念，而是「回答抓不到重點、論證缺乏結構」。
+CER 框架源自科學論證模型（Claim-Evidence-Reasoning），教你用三段式結構精確回答任何問答題與論述題。</p>
+<p><figure class="concept-diagram" role="img" aria-label="CER 結構"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">CER 骨架筆記論證結構</text>
+
+  <!-- Claim -->
+  <rect x="60" y="75" width="480" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="90" y="115" font-size="18" font-weight="bold" fill="#1e40af">C (Claim 主張)</text>
+  <text x="240" y="115" font-size="14" fill="#1e40af">回答核心問題的直接結論或核心觀點</text>
+
+  <!-- Evidence -->
+  <rect x="60" y="160" width="480" height="70" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="90" y="200" font-size="18" font-weight="bold" fill="#92400e">E (Evidence 證據)</text>
+  <text x="240" y="200" font-size="14" fill="#92400e">支撐主張的具體數據、實驗觀察或客觀事實</text>
+
+  <!-- Reasoning -->
+  <rect x="60" y="245" width="480" height="70" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+  <text x="90" y="285" font-size="18" font-weight="bold" fill="#065f46">R (Reasoning 推理)</text>
+  <text x="240" y="285" font-size="14" fill="#065f46">運用科學原理或邏輯法則，連結證據與主張的論證鏈</text>
+</svg><figcaption>CER 結構</figcaption></figure></p>
+<h3>3.2 三步驟實操流程</h3>
+<ol>
+<li><strong>提出主張 (Claim)</strong>：用簡潔一句話正面回答核心問題，不拖泥帶水。</li>
+<li><strong>列舉證據 (Evidence)</strong>：從題幹引文、圖表數據或已知實驗現象中擷取客觀事實。</li>
+<li><strong>進行推理 (Reasoning)</strong>：運用學科定理或科學原理，說明為什麼這些證據能夠支撐你的主張。</li>
+</ol>
+<h3>3.3 真實示例</h3>
+<p>以高中生物「酵素活性實驗題組」為例：</p>
+<ul>
+<li><strong>Claim（主張）</strong>：該未知酵素的最適合反應溫度約在 <math><mrow><msup><mn>40</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math> 至 <math><mrow><msup><mn>45</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math> 之間。</li>
+<li><strong>Evidence（證據）</strong>：實驗數據顯示，溫度由 <math><mrow><msup><mn>20</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math> 升至 <math><mrow><msup><mn>40</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math> 時產物生成速率由 <math><mn>1.2</mn></math> 增加至 <math><mrow><mn>4.8</mn><mspace width="0.1667em"></mspace><mtext>mg/min</mtext></mrow></math>；但在 <math><mrow><msup><mn>50</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math> 時驟降至 <math><mrow><mn>0.5</mn><mspace width="0.1667em"></mspace><mtext>mg/min</mtext></mrow></math>。</li>
+<li><strong>Reasoning（推理）</strong>：在最適溫度前，溫度升高使分子碰撞頻率增加；超過最適溫度後，高溫導致蛋白質高階結構變性失活，催化活性喪失，故活性峰值落於 <math><mrow><msup><mn>40</mn><mo>∘</mo></msup><mtext>C</mtext><mo>∼</mo><msup><mn>45</mn><mo>∘</mo></msup><mtext>C</mtext></mrow></math>。</li>
+</ul>
+<h4>CER 筆記操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="CER 筆記介面"><img src="img/ui_cer_note.png" alt="CER 筆記介面" loading="lazy" /><figcaption>CER 筆記介面</figcaption></figure></p>
+<ul>
+<li><strong>示範題目</strong>：高中生物【探究與實作：酵素最適反應溫度判定】。</li>
+<li><strong>① CER 三欄骨架輸入</strong>：分別填入「主張 (Claim)」、「證據 (Evidence)」與「推理 (Reasoning)」。</li>
+<li><strong>② 骨架完整度即時檢測</strong>：系統自動檢查三要素關聯度，防止只有主張缺乏證據支撐。</li>
+<li><strong>③ 生成結構化筆記卡</strong>：一鍵將論證梳理為格式工整的素養筆記。</li>
+</ul>
+<h3>3.4 常見錯誤對照表</h3>
+<table>
+<thead>
+<tr>
+<th align="left">常見錯誤盲點</th>
+<th align="left">典型錯誤表現</th>
+<th align="left">正確作法與 CER 心法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>主張模糊不清</strong></td>
+<td align="left">「我覺得兩者好像有關係，溫度滿重要的」</td>
+<td align="left">用肯定句正面回答結論，精確界定範圍</td>
+</tr>
+<tr>
+<td align="left"><strong>證據缺乏數據</strong></td>
+<td align="left">只寫「實驗數據看起來很高」，未引用具體數值</td>
+<td align="left">引用表格中的具體讀數、坐標變化或對照組差異</td>
+</tr>
+<tr>
+<td align="left"><strong>跳過推理直接下結論</strong></td>
+<td align="left">寫完數據後直接說「所以我的主張成立」</td>
+<td align="left">補齊科學原理（如變性、碰撞學說、守恆定律）作為橋樑</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip" role="note">
+
+<p><strong>💡 提示</strong>
+CER 不僅適用於自然科探究題，在社會科歷史因果析論、地理圖表判讀與國寫議論篇章中，也是拿滿論證分數的關鍵利器。</p>
+
+</div>
+<h3>3.5 本週挑戰</h3>
+<p>從歷屆學測非選題中挑選一題「圖表判讀說明題」，使用 CER 格式撰寫 150 字內的精準回答，並送出給 AI 批改其因果完整度！</p>
+<hr />
+<h2 id="section-4">4. SM-2 閃卡複習</h2>
+<h3>4.1 為什麼要用 SM-2 閃卡複習</h3>
+<p>德國心理學家艾賓浩斯（Hermann Ebbinghaus）的遺忘曲線指出，學習後 24 小時內若無複習，將遺忘近 70% 的內容。
+SM-2 間隔重複演算法透過計算你的作答回饋，在「即將遺忘的臨界點」安排複習，並動態調節簡易度因子 <math><mrow><mi>E</mi><mi>F</mi></mrow></math>，以最少的複習次數維持 90% 以上的長時記憶率。</p>
+<p><figure class="concept-diagram" role="img" aria-label="SM-2 曲線"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">SM-2 間隔重複記憶曲線</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="300" x2="550" y2="300" stroke="#64748b" stroke-width="2"/>
+  <line x1="60" y1="300" x2="60" y2="70" stroke="#64748b" stroke-width="2"/>
+  <text x="540" y="325" font-size="13" fill="#64748b">時間</text>
+  <text x="45" y="80" font-size="13" fill="#64748b">記憶率</text>
+
+  <!-- Curve 1 (no review) -->
+  <path d="M 60 100 Q 120 280 200 295" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" fill="none"/>
+  <text x="140" y="270" font-size="12" fill="#ef4444">未複習（迅速遺忘）</text>
+
+  <!-- Review 1 -->
+  <path d="M 60 100 Q 100 220 130 230" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="130" y1="230" x2="130" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="130" cy="100" r="4" fill="#10b981"/>
+  <text x="130" y="90" font-size="12" text-anchor="middle" fill="#047857">第 1 次複習</text>
+
+  <!-- Review 2 -->
+  <path d="M 130 100 Q 190 200 240 210" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="240" y1="210" x2="240" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="240" cy="100" r="4" fill="#10b981"/>
+  <text x="240" y="90" font-size="12" text-anchor="middle" fill="#047857">第 2 次複習</text>
+
+  <!-- Review 3 -->
+  <path d="M 240 100 Q 330 180 400 190" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <line x1="400" y1="190" x2="400" y2="100" stroke="#10b981" stroke-width="2" stroke-dasharray="2"/>
+  <circle cx="400" cy="100" r="4" fill="#10b981"/>
+  <text x="400" y="90" font-size="12" text-anchor="middle" fill="#047857">第 3 次複習</text>
+
+  <!-- Flat stable curve -->
+  <path d="M 400 100 Q 480 130 540 135" stroke="#059669" stroke-width="3" fill="none"/>
+  <text x="480" y="160" font-size="13" font-weight="bold" fill="#065f46">進入長時穩定記憶</text>
+</svg><figcaption>SM-2 曲線</figcaption></figure></p>
+<h3>4.2 三步驟實操流程</h3>
+<ol>
+<li><strong>主動回想正面問題</strong>：看見卡片正面題目時，強制自己在腦海中浮現答案或關鍵步驟，嚴禁直接點擊翻面。</li>
+<li><strong>翻面核對自我評分</strong>：誠實選擇你的回想難度：
+<ul>
+<li><strong>忘記 (Again)</strong>：完全想不起來或答錯，立即排入稍後重測。</li>
+<li><strong>困難 (Hard)</strong>：勉強想出但耗時許久，縮短下次間隔。</li>
+<li><strong>良好 (Good)</strong>：正常回想正確，間隔平穩倍增。</li>
+<li><strong>簡單 (Easy)</strong>：秒答且信心十足，顯著拉長下次間隔。</li>
+</ul>
+</li>
+<li><strong>完成每日隊列零積壓</strong>：每日依排程清空「今日待複習」卡片，維持複習節奏。亦可利用 <a href="#section-9">自訂牌組雲端同步與備份</a> 在手機與平板無縫切換背卡。</li>
+</ol>
+<h3>4.3 真實示例</h3>
+<p>數學公式閃卡示例：</p>
+<ul>
+<li><strong>卡片正面</strong>：空間向量中，兩向量 <math><mrow><mover><mi>a</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>z</mi><mn>1</mn></msub><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math> 與 <math><mrow><mover><mi>b</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>z</mi><mn>2</mn></msub><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math> 的外積 <math><mrow><mover><mi>a</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover></mrow></math> 坐標表示法為何？</li>
+<li><strong>卡片背面</strong>：
+<math display="block" class="tml-display" style="display:block math;"><mrow><mover><mi>a</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mrow><mo fence="true" form="prefix" stretchy="true">|</mo><mtable><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>y</mi><mn>2</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>z</mi><mn>2</mn></msub></mtd></mtr></mtable><mo fence="true" form="postfix" stretchy="true">|</mo></mrow><mo separator="true">,</mo><mrow><mo fence="true" form="prefix" stretchy="true">|</mo><mtable><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>z</mi><mn>1</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>z</mi><mn>2</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo fence="true" form="postfix" stretchy="true">|</mo></mrow><mo separator="true">,</mo><mrow><mo fence="true" form="prefix" stretchy="true">|</mo><mtable><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd style="padding-left:0em;padding-right:5.9776pt;"><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd style="padding-left:5.9776pt;padding-right:0em;"><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo fence="true" form="postfix" stretchy="true">|</mo></mrow><mo fence="true" form="postfix" stretchy="true">)</mo></mrow></mrow></math>
+<ul>
+<li>幾何意義：垂直於 <math><mover><mi>a</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover></math> 與 <math><mover><mi>b</mi><mo stretchy="false" class="tml-vec wbk-vec">→</mo></mover></math> 所張平面的法向量，其長度等於兩向量所張之平行四邊形面積。</li>
+</ul>
+</li>
+</ul>
+<h4>SM-2 閃卡複習操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="SM-2 閃卡複習介面"><img src="img/ui_sm2_flashcard.png" alt="SM-2 閃卡複習介面" loading="lazy" /><figcaption>SM-2 閃卡複習介面</figcaption></figure></p>
+<ul>
+<li><strong>示範題目</strong>：高中數學【空間向量外積定義與公式】。</li>
+<li><strong>① 正面題目與隱藏答案</strong>：看題後主動回想，點擊中央卡片旋轉翻面。</li>
+<li><strong>② 翻面後解析與公式對照</strong>：背面完整列出矩陣行列式運算與法向量幾何意涵。</li>
+<li><strong>③ 四檔回想難度評分</strong>：Again、Hard、Good、Easy，由演算法即時計算下一輪複習天數。</li>
+</ul>
+<h3>4.4 常見錯誤對照表</h3>
+<table>
+<thead>
+<tr>
+<th align="left">常見錯誤盲點</th>
+<th align="left">典型錯誤表現</th>
+<th align="left">正確作法與 SM-2 心法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>被動看卡片</strong></td>
+<td align="left">看到題目一秒就點翻面，邊看答案邊點頭「我會」</td>
+<td align="left">務必在心中完整默背出算式或關鍵字，才算回想成功</td>
+</tr>
+<tr>
+<td align="left"><strong>自欺欺人評分</strong></td>
+<td align="left">明明想不起來卻硬按 Good，深怕卡片重複出現</td>
+<td align="left">誠實選 Again 才能讓演算法在黃金週期幫你補強</td>
+</tr>
+<tr>
+<td align="left"><strong>假日一次刷幾百張</strong></td>
+<td align="left">平日累積不背，週末熬夜突擊式補進度</td>
+<td align="left">間隔重複的效果建立在「每日少量但持續」，杜絕積壓</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important" role="note">
+
+<p><strong>✅ 重點</strong>
+閃卡背面切忌複製整篇課本！一張卡片只專注一個單一概念（Atomic Principle），問答越精簡，記憶提取效率越高。</p>
+
+</div>
+<h3>4.5 本週挑戰</h3>
+<p>整理 10 張最容易搞混的「英文常見文法介系詞片語」或「化學沉澱表口訣」，連續 5 天完成每日清空複習任務！</p>
+<hr />
+<h2 id="section-5">5. 蘇格拉底追問</h2>
+<h3>5.1 為什麼要用蘇格拉底追問</h3>
+<p>許多同學在刷題時，一遇到難題就直接對詳解，看完覺得「我懂了」，但在考場上一旦題幹敘述改變就再度失分。
+蘇格拉底追問法（Socratic Method）透過 AI 教練的連續引導式提問，不直接透露答案，逼迫你一步步推導出解題突破口。</p>
+<p><figure class="concept-diagram" role="img" aria-label="蘇格拉底追問循環"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">蘇格拉底追問引導閉環</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="220" height="85" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#991b1b">1. 拋出盲點或困惑</text>
+  <text x="160" y="145" text-anchor="middle" font-size="13" fill="#b91c1c">我不懂為什麼這題不能選 B</text>
+
+  <!-- Step 2 -->
+  <rect x="330" y="80" width="220" height="85" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="440" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">2. AI 關鍵提問反思</text>
+  <text x="440" y="145" text-anchor="middle" font-size="13" fill="#2563eb">不直接給答案，引導看題幹條件</text>
+
+  <!-- Step 3 -->
+  <rect x="330" y="225" width="220" height="85" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="260" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">3. 自行推理與回答</text>
+  <text x="440" y="290" text-anchor="middle" font-size="13" fill="#b45309">重新檢視條件，說出自己的推導</text>
+
+  <!-- Step 4 -->
+  <rect x="50" y="225" width="220" height="85" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="160" y="260" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">4. 領悟並沉澱閃卡</text>
+  <text x="160" y="290" text-anchor="middle" font-size="13" fill="#047857">一鍵將對話精華轉入錯題與閃卡</text>
+
+  <!-- Connecting Arrows -->
+  <path d="M 270 122 L 320 122" stroke="#94a3b8" stroke-width="3" fill="none"/>
+  <path d="M 440 165 L 440 215" stroke="#94a3b8" stroke-width="3" fill="none"/>
+  <path d="M 330 267 L 280 267" stroke="#94a3b8" stroke-width="3" fill="none"/>
+  <path d="M 160 225 L 160 175" stroke="#94a3b8" stroke-width="3" fill="none"/>
+</svg><figcaption>蘇格拉底追問循環</figcaption></figure></p>
+<h3>5.2 三步驟實操流程</h3>
+<ol>
+<li><strong>輸入題目與卡點</strong>：貼上題目描述並明確說出「我算到這一步，但不確定下一步該用哪個定理」。</li>
+<li><strong>回應教練的啟發性提問</strong>：AI 不會直接給予算式，而是反問：「題目給了垂直條件，你聯想到哪個向量運算的性質？」請依據提示嘗試作答。</li>
+<li><strong>完成推論並一鍵沉澱</strong>：當你順利突破盲點時，點擊對話下方的「沉澱為閃卡」，將這次的頓悟點記錄下來。</li>
+</ol>
+<h3>5.3 真實示例</h3>
+<p>對話實錄：</p>
+<ul>
+<li><strong>學生</strong>：這題拋體運動，我算不出物體落地時的速度方向。</li>
+<li><strong>AI 教練</strong>：很好的嘗試！在分析拋體運動時，我們通常會將運動拆解為哪兩個互相獨立的維度？</li>
+<li><strong>學生</strong>：水平方向的等速度運動，和鉛直方向的自由落體（受重力等加速度）。</li>
+<li><strong>AI 教練</strong>：完全正確！那麼落地時，這兩個方向的速度分別是多少？要如何合成出最終速度的方向角？</li>
+<li><strong>學生</strong>：啊！水平速度一直不變，鉛直速度可以用 <math><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mi>g</mi><mi>t</mi></mrow></math> 算出，然後用 <math><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>θ</mi><mo>=</mo><mfrac><msub><mi>v</mi><mi>y</mi></msub><msub><mi>v</mi><mi>x</mi></msub></mfrac></mrow></math> 就能求出夾角了！</li>
+<li><strong>AI 教練</strong>：漂亮！這就是拋體運動的核心解題骨架。</li>
+</ul>
+<h4>蘇格拉底追問操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="蘇格拉底追問介面"><img src="img/ui_socratic_chat.png" alt="蘇格拉底追問介面" loading="lazy" /><figcaption>蘇格拉底追問介面</figcaption></figure></p>
+<ul>
+<li><strong>示範題目</strong>：高中物理【斜拋運動落地速度夾角解析】。</li>
+<li><strong>① 學生提問與盲點輸入</strong>：貼上題目並陳述自己卡在「速度合成」步驟。</li>
+<li><strong>② AI 引導式反問</strong>：教練提示水平與鉛直獨立維度拆解，誘導自主推論。</li>
+<li><strong>③ 頓悟沉澱為閃卡</strong>：學生突破盲點後，點擊對話氣泡底部直接沉澱為複習閃卡。</li>
+</ul>
+<h3>5.4 常見錯誤對照表</h3>
+<table>
+<thead>
+<tr>
+<th align="left">常見錯誤盲點</th>
+<th align="left">典型錯誤表現</th>
+<th align="left">正確作法與追問心法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>索求直接答案</strong></td>
+<td align="left">不斷發送「直接告訴我答案是 A 還是 B」</td>
+<td align="left">拋開得失心，順著教練的子問題逐步推導思考</td>
+</tr>
+<tr>
+<td align="left"><strong>回覆過於簡略</strong></td>
+<td align="left">只回答「不知道」或「忘了」，不嘗試表達想法</td>
+<td align="left">把你「猜測」的想法說出來，即使錯了也是重要的思考線索</td>
+</tr>
+<tr>
+<td align="left"><strong>未沉澱對話精華</strong></td>
+<td align="left">聊完獲得解答就關閉頁面，數天後再度忘記</td>
+<td align="left">每次對話結束時，務必點擊「沉澱為閃卡」或筆記存檔</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning" role="note">
+
+<p><strong>⚠️ 注意</strong>
+把追問當成直接解題機器人：如果你不斷要求「直接給我算式和答案」，會喪失考場上自行分析未知題目的獨立作答能力。</p>
+
+</div>
+<div class="callout callout-warning" role="note">
+
+<p><strong>⚠️ 注意</strong>
+對話沉澱不及時：在結束對話後，務必點擊「沉澱為閃卡」或「記錄至錯題本」，否則寶貴的頓悟經驗會在數天後淡忘。</p>
+
+</div>
+<h3>5.5 本週挑戰</h3>
+<p>挑選一題你一直搞不懂的幾何證明或物理分析題，透過蘇格拉底追問完成至少 3 回合對話，直到靠自己的推論得出結論！</p>
+<hr />
+<h2 id="section-6">6. 練習與題庫實戰</h2>
+<h3>6.1 六科題庫與課綱考點對齊</h3>
+<p>學測教練完整收錄 108 課綱六大科目題庫：</p>
+<ul>
+<li><strong>國語文</strong>：閱讀理解、跨領域素養題、國寫範文庫與寫作規準。</li>
+<li><strong>英文</strong>：文意字彙、綜合測驗、文意選填、篇章結構與閱讀測驗。</li>
+<li><strong>數學 A / 數學 B</strong>：精準標註單選、多選與選填題，嚴格對齊兩類數學考綱差異。</li>
+<li><strong>社會科</strong>：歷史、地理、公民三科合科題組與圖表判讀題。</li>
+<li><strong>自然科</strong>：物理、化學、生物、地球科學實驗探究題與題組題。</li>
+</ul>
+<h3>6.2 非選題自評與評分規準</h3>
+<p>針對非選擇題，系統提供詳細之標準答案要點與給分級距。完成作答後，你可以依據「核心論點」、「數據引用」、「推理邏輯」三維度進行誠實自評，並將盲點歸檔至復盤系統。</p>
+<h3>6.3 錯題本復盤與標籤管理</h3>
+<ul>
+<li><strong>錯誤原因標籤</strong>：審題不清、觀念模糊、計算失誤、時間不足。</li>
+<li><strong>智慧過濾</strong>：可依科目、單元考點與錯誤原因交叉篩選。</li>
+<li><strong>復盤閉環</strong>：針對錯題進行費曼重述或追問，確認完全掌握後可移出錯題清單。</li>
+<li><strong>題庫定期更新</strong>：題庫全面按 108 課綱章節補齊，每章至少具備 10 題以上之代表性精選練習題。資料庫定期自雲端同步最新試題與勘誤，詳情參閱 <a href="#section-9">題庫自動更新</a>。</li>
+</ul>
+<div class="callout callout-important" role="note">
+
+<p><strong>✅ 重點</strong>
+題庫由 AI 生成並經人工審核、對齊 108 課綱，不含大考中心歷屆試題原題。錯題本的價值不在於收集了多少題，而在於每週減少了多少題，建議每週末固定安排「錯題復盤專屬時段」。</p>
+
+</div>
+<h3>6.4 學測題庫與自評操作畫面示範</h3>
+<p><figure class="concept-diagram" role="img" aria-label="學測實戰題庫與自評介面"><img src="img/ui_practice_bank.png" alt="學測實戰題庫與自評介面" loading="lazy" /><figcaption>學測實戰題庫與自評介面</figcaption></figure></p>
+<ul>
+<li><strong>示範題目</strong>：112 年學測數學 A 第 3 題【空間向量夾角求值】。</li>
+<li><strong>① 六科挑題橫向頁籤</strong>：可自由切換國文、英文、數學 A、數學 B、社會、自然科，所有題目均已離線等冪預載。</li>
+<li><strong>② 離線自評展開對照</strong>：點擊展開手風琴，呈現大考中心官方評分規準（得分點 1：設法向量；得分點 2：兩面角餘弦公式；得分點 3：正負坐標求解）。</li>
+<li><strong>③ 本機錯題閉環</strong>：非選作答自動儲存於本地複習本，支援一鍵加入錯題本或發起蘇格拉底深度追問。</li>
+</ul>
+<hr />
+<h2 id="section-7">7. 家長設定輔助</h2>
+<h3>7.1 家長的角色：陪伴而不干預</h3>
+<p>學測教練的設計理念是賦能學生自主學習。家長可以在背後提供資源與守護，而無須過度干預學生的日常作答細節：</p>
+<ul>
+<li><strong>安全守護</strong>：協助設定 API 金鑰或購買點數包，讓學生安心探索。</li>
+<li><strong>理解而非審查</strong>：透過手冊了解費曼法與 CER 的學習原理，在日常對話中多給予正向反饋。</li>
+</ul>
+<h3>7.2 何時需要金鑰或官方點數</h3>
+<p>學測教練絕大部分功能（六科全題庫練習、離線自評、閃卡演算法排程、錯題本、手冊閱讀）均為純本機運行，完全免網路、免金鑰。
+僅當學生欲使用「AI 批改作文」、「費曼輸出診斷」與「蘇格拉底深層追問」時，才需要金鑰或官方點數。</p>
+<div class="callout callout-parent" role="note">
+
+<p><strong>👨‍👩‍👧 家長看這裡</strong>
+若家長不希望自行在 Google 或 OpenAI 註冊開發者帳號並綁定信用卡，學測教練現已提供開箱即用的「官方點數代理」模式。直接在 App 內點數商城透過 App Store 或 Google Play 購買點數包，儲值後立即可用。點數永不過期，且點數消耗完畢即自動停止，提供最直觀的家用支出上限控制。詳情可參閱 <a href="#section-8">點數與雙軌模式</a>。</p>
+
+</div>
+<h3>7.3 家長 AI 設定與預算守護操作畫面示範</h3>
+<p><figure class="concept-diagram" role="img" aria-label="家長金鑰與預算守護介面"><img src="img/ui_parent_budget.png" alt="家長金鑰與預算守護介面" loading="lazy" /><figcaption>家長金鑰與預算守護介面</figcaption></figure></p>
+<ul>
+<li><strong>示範配置</strong>：支援雙軌切換開關、OpenAI 模型（gpt-4o-mini）與每月預算 $10 USD。</li>
+<li><strong>① 雙軌模式彈性選擇</strong>：可一鍵在「官方點數代理」與「自備金鑰 (BYOK)」之間切換，滿足不同家庭習慣。</li>
+<li><strong>② 自備金鑰安全隔離</strong>：若採用自備金鑰，API Key 妥善存放於學生手機硬體安全晶片（Secure Storage），不經第三方伺服器。</li>
+<li><strong>③ 每月預算滑桿控制</strong>：可自訂 $2 ~ $50 USD 上限（建議 $10 USD，約新台幣 320 元，支援數百到上千次批改或追問），到達上限時由狀態機自動短路攔截，杜絕任何意外超額帳單。</li>
+</ul>
+<h3>7.4 常見疑慮與家長指南完整指引</h3>
+<ul>
+<li><strong>學生資料會被拿去訓練模型嗎？</strong> 透過官方 API 付費通道傳輸之對話，依據服務條款不會被用於訓練模型。</li>
+<li><strong>需要綁定信用卡嗎？</strong> 若使用官方點數代理，可直接透過雙平台商店付款（支援超商現金儲值與電信帳單）；若使用 BYOK 則依服務商規範。</li>
+<li><strong>完整金鑰申請步驟</strong>：請在 App 內前往設定頁面點擊 <a href="#section-7">家長設定指南</a>（或於 App 內訪問 <code>/settings/parent-guide</code> 原生頁面），內含圖文流程。</li>
+</ul>
+<hr />
+<h2 id="section-8">8. 點數與雙軌模式</h2>
+<p><em>本單元功能需更新至最新版 App。</em></p>
+<h3>8.1 雙軌切換指南</h3>
+<p>學測教練提供「官方點數代理」與「自備金鑰 (BYOK)」兩種 AI 運算模式，滿足不同學生的使用需求：</p>
+<ul>
+<li><strong>官方點數代理</strong>：開箱即用、免去申請雲端 API 金鑰與信用卡綁定的繁瑣步驟；透過雙平台應用程式內購買（IAP）點數包，以微美金進行按字扣抵。適合希望快速上手、專注備考的同學與家庭。</li>
+<li><strong>自備金鑰 (BYOK)</strong>：直接連線至 Google AI Studio 或 OpenAI 官方 API，金鑰存放於本機硬體安全晶片，並提供每月預算滑桿防護。適合已有 API 金鑰或希望使用自訂模型參數的同學。</li>
+</ul>
+<h4>三步驟切換動線</h4>
+<ol>
+<li>前往「設定」頁面，找到「AI 服務與雙軌設定」。</li>
+<li>切換「官方點數代理模式」開關；若目前為訪客身份，系統將主動引導綁定帳號以保護點數安全。</li>
+<li>切換完成後，觀察頁面頂部的「即時餘額膠囊」，確認當前可用點數狀態。當啟用官方代理時，自備金鑰槽位將自動置灰收合，原設定與金鑰妥善封存。</li>
+</ol>
+<p><figure class="concept-diagram" role="img" aria-label="雙軌模式架構概念圖"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">AI 雙軌模式架構：官方代理 vs 自備金鑰</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">隨時一鍵切換 ‧ 歷史紀錄與學習進度完整保留 ‧ 互不覆蓋</text>
+
+  <!-- 官方點數代理 (方案 A) -->
+  <rect x="35" y="85" width="235" height="235" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="152" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#1d4ed8">方案 A：官方點數代理</text>
+  <rect x="48" y="130" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="153" font-size="12" fill="#1e40af">⚡ 免申請金鑰，開箱即用</text>
+  <rect x="48" y="174" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="197" font-size="12" fill="#1e40af">💳 雙平台 IAP 內購點數包</text>
+  <rect x="48" y="218" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="241" font-size="12" fill="#1e40af">📊 按字扣抵，點數永不過期</text>
+  <rect x="48" y="262" width="209" height="36" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="58" y="285" font-size="12" fill="#1e40af">🔒 帳號綁定，雲端餘額保護</text>
+
+  <!-- 中央切換控制與雙向箭頭 -->
+  <path d="M 276 135 L 324 135 M 284 130 L 276 135 L 284 140 M 316 130 L 324 135 L 316 140" stroke="#64748b" stroke-width="2" fill="none"/>
+  <rect x="282" y="155" width="36" height="66" rx="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="300" cy="173" r="13" fill="#3b82f6"/>
+  <text x="300" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">雙軌切換</text>
+  <text x="300" y="265" text-anchor="middle" font-size="11" fill="#64748b">原位切換</text>
+
+  <!-- 自備金鑰 BYOK (方案 B) -->
+  <rect x="330" y="85" width="235" height="235" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="447" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#b45309">方案 B：自備金鑰 (BYOK)</text>
+  <rect x="343" y="130" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="153" font-size="12" fill="#92400e">🔑 直連 Google AI / OpenAI</text>
+  <rect x="343" y="174" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="197" font-size="12" fill="#92400e">🛡️ 本地安全儲存，金鑰不經伺服器</text>
+  <rect x="343" y="218" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="241" font-size="12" fill="#92400e">🎚️ 每月預算滑桿守護防爆衝</text>
+  <rect x="343" y="262" width="209" height="36" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="353" y="285" font-size="12" fill="#92400e">🆓 善用官方免費 Token 額度</text>
+
+  <!-- 底部保證標籤 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">✅ 切換時原設定與額度安全留存，資料不互刪</text>
+</svg><figcaption>雙軌模式架構概念圖</figcaption></figure></p>
+<h4>雙軌切換實操示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="雙軌切換實操示範"><img src="img/ui_credit_switch.png" alt="雙軌切換實操示範" loading="lazy" /><figcaption>雙軌切換實操示範</figcaption></figure></p>
+<div class="callout callout-tip" role="note">
+
+<p><strong>💡 提示</strong>
+雙軌互切資料不互刪保證：在官方代理與自備金鑰之間切換，僅改變 AI 批改與推論的連線管道，絕不會清除你的 API 金鑰、點數餘額、錯題本、自訂牌組或學習記錄。</p>
+
+</div>
+<h3>8.2 IAP 點數包購買與微美金扣抵說明</h3>
+<p>官方點數代理採用透明、精確的「微美金（Micro-USD）會計系統」：</p>
+<ul>
+<li><strong>核心計費原則</strong>：<math><mn>1</mn></math> 點 ＝ $0.001 美元（約新台幣 0.03 元）。</li>
+<li><strong>按字扣抵、用多少扣多少</strong>：系統僅依據每次費曼批改、作文診斷或蘇格拉底追問實際消耗的 Token 計算，無任何月租或最低消費。一般單次批改花費約 0.5 至 3 點（折合約新台幣 0.02 至 0.1 元）。</li>
+<li><strong>點數永不過期</strong>：購買的點數包無使用期限，未用完的點數將持續安全留存於你的雲端帳戶中。</li>
+<li><strong>儲值即時入帳</strong>：在 App 內點數商城完成購買後，透過後端安全防偽驗證，點數即時增加並同步更新餘額膠囊。</li>
+</ul>
+<p><figure class="concept-diagram" role="img" aria-label="點數會計與扣抵概念圖"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">微美金點數全生命週期：儲值、留存與扣抵</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">1 點 ＝ $0.001 美元 ‧ 永不過期 ‧ 用多少扣多少</text>
+
+  <!-- 階段一：IAP 儲值購買 -->
+  <rect x="25" y="85" width="160" height="225" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="25" y="85" width="160" height="42" rx="10" fill="#dbeafe"/>
+  <text x="105" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">1. 雙平台 IAP 儲值</text>
+  
+  <text x="35" y="150" font-size="12" fill="#1e3a8a">📱 雙平台正規內購</text>
+  <text x="45" y="170" font-size="11" fill="#475569">Apple App Store</text>
+  <text x="45" y="188" font-size="11" fill="#475569">Google Play 商店</text>
+  <text x="35" y="215" font-size="12" fill="#1e3a8a">📦 三種點數包規格</text>
+  <text x="45" y="235" font-size="11" fill="#475569">300 / 800 / 2000 點</text>
+  <text x="35" y="262" font-size="12" fill="#1e3a8a">🏪 多元便利付款</text>
+  <text x="45" y="282" font-size="11" fill="#475569">支援超商/信用卡/電信</text>
+
+  <!-- 流程箭頭 1 -->
+  <path d="M 192 195 L 213 195 M 206 189 L 213 195 L 206 201" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+
+  <!-- 階段二：微美金帳本 -->
+  <rect x="220" y="85" width="160" height="225" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="220" y="85" width="160" height="42" rx="10" fill="#dcfce7"/>
+  <text x="300" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">2. 微美金安全帳本</text>
+  
+  <text x="230" y="150" font-size="12" fill="#14532d">💎 點數永不過期</text>
+  <text x="240" y="170" font-size="11" fill="#475569">零月租、零期限壓力</text>
+  <text x="230" y="198" font-size="12" fill="#14532d">⚖️ 精確整數記帳</text>
+  <text x="240" y="218" font-size="11" fill="#475569">無浮點誤差 (64-bit)</text>
+  <text x="240" y="236" font-size="11" fill="#475569">1 點 ＝ 0.001 美元</text>
+  <text x="230" y="262" font-size="12" fill="#14532d">🛡️ 雲端帳號保護</text>
+  <text x="240" y="282" font-size="11" fill="#475569">換手機登入立即還原</text>
+
+  <!-- 流程箭頭 2 -->
+  <path d="M 387 195 L 408 195 M 401 189 L 408 195 L 401 201" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+
+  <!-- 階段三：AI 微扣抵 -->
+  <rect x="415" y="85" width="160" height="225" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <rect x="415" y="85" width="160" height="42" rx="10" fill="#fef3c7"/>
+  <text x="495" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">3. AI 批改微扣抵</text>
+  
+  <text x="425" y="150" font-size="12" fill="#78350f">🎯 用多少扣多少</text>
+  <text x="435" y="170" font-size="11" fill="#475569">費曼總結批改與追問</text>
+  <text x="435" y="188" font-size="11" fill="#475569">每次約 0.5 ~ 3 點</text>
+  <text x="425" y="215" font-size="12" fill="#78350f">💰 極低花費無負擔</text>
+  <text x="435" y="235" font-size="11" fill="#475569">折合每次僅 NT$ 0.02</text>
+  <text x="425" y="262" font-size="12" fill="#78350f">📝 餘額保護機制</text>
+  <text x="435" y="282" font-size="11" fill="#475569">點數不足草稿不遺失</text>
+
+  <!-- 底部說明 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">💡 透明對帳：隨時於「AI 設定」查看即時餘額膠囊與完整交易明細</text>
+</svg><figcaption>點數會計與扣抵概念圖</figcaption></figure></p>
+<h4>點數商城與微美金扣抵示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="點數商城與微美金扣抵示範"><img src="img/ui_iap_store.png" alt="點數商城與微美金扣抵示範" loading="lazy" /><figcaption>點數商城與微美金扣抵示範</figcaption></figure></p>
+<ul>
+<li><strong>雙平台安全內購</strong>：點數包透過 Apple App Store 與 Google Play 官方應用程式內購買（IAP）機制支付，支援信用卡、超商現金儲值與電信代收，交易安全有保障。</li>
+<li><strong>點數不足原位保護</strong>：當帳戶餘額不足以發起 AI 批改時，系統將跳出原位攔截提示並引導至點數商城；儲值完成返回後，你所撰寫的大白話總結與作答草稿 100% 完整保留，絕不遺失。</li>
+<li><strong>商品面額以 App 內標示為準</strong>：點數商城提供多種級距之點數包，具體商品規格、定價與優惠依 App 內商城即時標示為準。</li>
+</ul>
+<div class="callout callout-warning" role="note">
+
+<p><strong>⚠️ 注意</strong>
+為了保障消費安全與帳號權益，點數儲值僅限於 App 內正規雙平台商店通道完成，絕無任何外部私下交易或第三方儲值管道。</p>
+
+</div>
+<hr />
+<h2 id="section-9">9. 自訂牌組雲端同步與備份</h2>
+<h3>9.1 雲端同步與多裝置運作</h3>
+<p>學測教練採用「本機優先（Local-First）＋ 雲端即時收斂」架構，讓你在手機、平板與多裝置之間暢行無阻：</p>
+<ul>
+<li><strong>登入即同步</strong>：登入個人帳號後，系統自動啟用自訂牌組與學習進度之雙向同步。</li>
+<li><strong>本地 Outbox 佇列</strong>：所有新增、編輯或刪除自訂牌組與卡片的操作，皆第一時間寫入本機 SQLite 資料庫與 Outbox 佇列，操作零延遲。</li>
+<li><strong>背景自動推送</strong>：連網狀態下，系統自動將 Outbox 佇列異動推送至雲端，無需繁瑣手動操作。</li>
+</ul>
+<p><figure class="concept-diagram" role="img" aria-label="自訂牌組與題庫雲端同步收斂圖"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">自訂牌組雙向 Outbox 同步與雲端收斂</text>
+  <text x="300" y="65" text-anchor="middle" font-size="13" fill="#64748b">離線優先 ‧ 本地即時操作 ‧ 雲端精確裁決 ‧ 記憶權重 100% 留存</text>
+
+  <!-- 裝置 A (手機離線背卡) -->
+  <rect x="30" y="85" width="160" height="225" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="30" y="85" width="160" height="42" rx="10" fill="#dbeafe"/>
+  <text x="110" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">裝置 A (手機端)</text>
+  <text x="40" y="150" font-size="12" fill="#1e3a8a">📱 離線背卡複習</text>
+  <text x="50" y="170" font-size="11" fill="#475569">通勤無網路隨開隨背</text>
+  <text x="40" y="198" font-size="12" fill="#1e3a8a">📦 本地 Outbox 佇列</text>
+  <text x="50" y="218" font-size="11" fill="#475569">記錄 SM-2 熟練度評分</text>
+  <text x="40" y="246" font-size="12" fill="#1e3a8a">📶 連網背景推送</text>
+  <text x="50" y="266" font-size="11" fill="#475569">零等待、自動批次上傳</text>
+
+  <!-- 左至中 箭頭 -->
+  <path d="M 193 195 L 206 195 M 200 189 L 206 195 L 200 201" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+
+  <!-- 中央：Supabase 雲端收斂中心 -->
+  <rect x="210" y="85" width="180" height="225" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="210" y="85" width="180" height="42" rx="10" fill="#dcfce7"/>
+  <text x="300" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">Supabase 雲端收斂</text>
+  
+  <rect x="220" y="137" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="156" font-size="11" font-weight="bold" fill="#15803d">🧠 記憶權重 100% 留存</text>
+  <text x="228" y="173" font-size="10" fill="#475569">不同裝置複習評分完整合併</text>
+
+  <rect x="220" y="193" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="212" font-size="11" font-weight="bold" fill="#15803d">✍️ 卡片內容最新獲勝</text>
+  <text x="228" y="229" font-size="10" fill="#475569">以更新時間戳精確裁決內容</text>
+
+  <rect x="220" y="249" width="160" height="48" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="228" y="268" font-size="11" font-weight="bold" fill="#15803d">🏷️ 標籤軟刪除保護</text>
+  <text x="228" y="285" font-size="10" fill="#475569">防止孤兒卡片與解綁遺失</text>
+
+  <!-- 右至中 箭頭 -->
+  <path d="M 407 195 L 394 195 M 400 189 L 394 195 L 400 201" stroke="#d97706" stroke-width="2.5" fill="none"/>
+
+  <!-- 裝置 B (平板修改卡片) -->
+  <rect x="410" y="85" width="160" height="225" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <rect x="410" y="85" width="160" height="42" rx="10" fill="#fef3c7"/>
+  <text x="490" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">裝置 B (平板/電腦)</text>
+  <text x="420" y="150" font-size="12" fill="#78350f">📖 離線編輯牌組</text>
+  <text x="430" y="170" font-size="11" fill="#475569">書桌前擴充整理卡片</text>
+  <text x="420" y="198" font-size="12" fill="#78350f">📦 本地 Outbox 佇列</text>
+  <text x="430" y="218" font-size="11" fill="#475569">記錄新增/修改/刪除操作</text>
+  <text x="420" y="246" font-size="12" fill="#78350f">📶 連網差量更新</text>
+  <text x="430" y="266" font-size="11" fill="#475569">拉取最新進度、合併衝突</text>
+
+  <!-- 底部說明 -->
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">✅ 真正跨裝置無縫切換：在公車上背卡、回書桌前編輯，進度完全同步</text>
+</svg><figcaption>自訂牌組與題庫雲端同步收斂圖</figcaption></figure></p>
+<h4>自訂牌組雲端同步示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="自訂牌組雲端同步示範"><img src="img/ui_deck_sync.png" alt="自訂牌組雲端同步示範" loading="lazy" /><figcaption>自訂牌組雲端同步示範</figcaption></figure></p>
+<h3>9.2 離線編輯與 SM-2 留存</h3>
+<p>備考路上難免遇到無網路或訊號不穩的情境（如捷運通勤、地下自習室）：</p>
+<ul>
+<li><strong>無網離線背卡</strong>：離線狀態下你可以照常翻閱複習自訂牌組中的每一張卡片，並點擊四檔評分。</li>
+<li><strong>SM-2 記憶權重 100% 留存</strong>：即使你在手機離線背卡、同時在家用平板修改同一張卡片的題目，當兩端上線同步時，雲端收斂演算法將完整保留你在各裝置的所有複習歷史與記憶熟練度權重，絕不抹除複習成效。</li>
+<li><strong>卡片內容最新獲勝</strong>：若同一張卡片的正面或背面文字在不同裝置發生修改衝突，系統以最新修改時間戳（毫秒級）精確判定勝出內容。</li>
+<li><strong>標籤安全保護</strong>：刪除標籤時採用軟刪除與解除關聯機制，確保自訂牌組內的卡片不受損壞。</li>
+</ul>
+<h3>9.3 雲端題庫自動差量更新</h3>
+<p>學測教練的六科題庫並非一成不變，團隊會持續收錄最新大考試題與勘誤更新：</p>
+<ul>
+<li><strong>啟動智慧檢查</strong>：App 啟動時在背景自動檢查雲端題庫版號，具備 6 小時水位節流保護，兼顧即時性與省電。</li>
+<li><strong>科目頁更新提示晶片</strong>：當檢測到新題目時，科目頁頂部會浮現「題庫已更新」InputChip 提示，點擊可快速瀏覽新題或直接關閉。</li>
+<li><strong>下拉刷新手動檢查</strong>：在科目主頁任何時候向下拉動（RefreshIndicator），皆可手動觸發題庫最新版號檢查。</li>
+<li><strong>作答歷史零影響</strong>：題庫差量更新僅補充新題庫與修正勘誤，你正在練習中的草稿與歷史錯題本進度受到完整保護。</li>
+</ul>
+<div class="callout callout-important" role="note">
+
+<p><strong>✅ 重點</strong>
+換新手機或平板時，只需登入同一個帳號，所有自訂牌組、錯題本與題庫進度將自動自雲端完整復原。</p>
+
+</div>
+<hr />
+<h2 id="section-10">10. 離線同步與資料安全</h2>
+<h3>10.1 離線運作邊界</h3>
+<p>學測教練遵循「本機優先（Local-First）」架構：</p>
+<ul>
+<li><strong>完全離線可用</strong>：題庫載入、閃卡複習、自訂牌組編輯、錯題管理、搜尋與本手冊閱讀皆可在無網路環境下順暢運作。</li>
+<li><strong>需要網路之功能</strong>：僅涉及雲端大型語言模型推論之功能（作文批改、追問、AI 費曼評估）與雲端多裝置同步需要連網。</li>
+</ul>
+<h3>10.2 同步機制與運作說明</h3>
+<p>為了兼顧隱私與便利，學測教練支援跨裝置安全備份：</p>
+<ul>
+<li>資料加密後僅存放於你的個人帳戶空間。</li>
+<li>同步操作由 App 啟動時背景自動檢查與科目主頁下拉刷新並存，詳見 <a href="#section-9">自訂牌組雲端同步與備份</a>。</li>
+</ul>
+<div class="callout callout-warning" role="note">
+
+<p><strong>⚠️ 注意</strong>
+iOS 系統對背景任務（Background Tasks）具有嚴格的省電與排程管控，系統不保證在特定時間精確觸發背景同步。因此，若你有跨裝置切換需求，建議在離開 App 前點擊一次「手動同步」或確認頂部狀態為已同步。</p>
+
+</div>
+<h3>10.3 資料安全抹除（Data Wipeout）</h3>
+<p>如果你打算更換手機或不再使用本服務，可於設定頁面執行「安全抹除本機資料」：</p>
+<ul>
+<li>此操作將徹底清除本機 SQLite 資料庫、閃卡複習排程與快取記錄。</li>
+<li>此操作不可逆，請務必於抹除前自行確認或匯出重要筆記。</li>
+</ul>
+<hr />
+<h2 id="section-11">11. 常見 Q&amp;A</h2>
+<h3>Q1: 為什麼我做完題目的錯題沒有自動出現？</h3>
+<p><strong>A:</strong> 請確認交卷時該題目狀態為答錯。若為非選題，需完成「自評送出」後，系統才會依據自評給分判斷是否納入錯題本。</p>
+<h3>Q2: 閃卡複習演算法可以調整難度係數嗎？</h3>
+<p><strong>A:</strong> SM-2 演算法會根據你每次翻卡點擊的四檔自評（Again, Hard, Good, Easy）自動動態調整簡易度因子 <math><mrow><mi>E</mi><mi>F</mi></mrow></math>，無須手動微調公式參數。</p>
+<h3>Q3: 換了新手機，我的錯題本和自訂牌組會消失嗎？</h3>
+<p><strong>A:</strong> 若你先前已在設定中登入並完成同步，於新裝置登入同一個帳戶後系統將自動自雲端完整復原自訂牌組與錯題紀錄；若僅使用離線訪客模式，請先至設定頁匯出備份檔案。</p>
+<h3>Q4: 費曼輸出可以說英文或台語嗎？</h3>
+<p><strong>A:</strong> 系統以繁體中文課綱為基準進行語意分析；英文科考點支援英文輸出，其餘學科建議使用繁體中文以獲得最精準的因果鏈診斷。</p>
+<h3>Q5: 家長指南的 API 金鑰每個月大概會花多少錢？</h3>
+<p><strong>A:</strong> 一般學測生每日進行 3-5 次概念追問與每週兩篇作文批改，每月花費通常在 $1 ~ $3 美元以內。設定 $5 ~ $10 的硬上限可完全避免任何超額風險。若選擇官方點數代理，更可直接在 App 內選購合適的點數包，用多少扣多少。</p>
+<h3>Q6: 為什麼公式有些地方顯示為純文字？</h3>
+<p><strong>A:</strong> 本手冊與 App 支援標準 LaTeX 數學公式（如 <code>&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn class=&quot;tml-sml-pad&quot;&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/math&gt;</code>）。若公式語法有缺漏或符號未閉合，系統將優雅降級為原始文字呈現，不影響正文閱讀。</p>
+<h3>Q7: 題庫題目有包含解答詳解嗎？</h3>
+<p><strong>A:</strong> 全科六目核心試題均附有完整解析與考點歸納；非選題更提供維度評分規準供自我檢視。</p>
+<h3>Q8: 可以在平板電腦上使用嗎？</h3>
+<p><strong>A:</strong> 可以。學測教練針對平板裝置（寬度 <math><mrow><mo>≥</mo><mn>840</mn><mtext>dp</mtext></mrow></math>）提供專屬雙欄自適應介面，左側常駐目錄或導覽，右側寬版閱讀，操作更直覺。</p>
+<h3>Q9: 為什麼有時候追問功能回答得比較慢？</h3>
+<p><strong>A:</strong> 蘇格拉底追問會根據你的歷史對話與題幹全貌進行多步推理，以提供不劇透的引導式問題。一般回應時間約在 2~4 秒之間，視網路狀態而定。</p>
+<h3>Q10: 可以在沒有網路的火車或捷運上背閃卡嗎？</h3>
+<p><strong>A:</strong> 完全可以！閃卡複習與間隔重複排程是 <math><mrow><mn>100</mn><mi>%</mi></mrow></math> 本機離線運作的，無網路環境下依舊能暢快翻卡。</p>
+<h3>Q11: 什麼時候該點擊「沉澱為閃卡」？</h3>
+<p><strong>A:</strong> 當你在追問對話或費曼輸出中獲得頓悟，或是找到了最精準的記憶口訣時，點擊「沉澱為閃卡」可立即將該精華鎖進未來的複習排程。</p>
+<h3>Q12: 刪除 App 會讓我的學習紀錄全毀嗎？</h3>
+<p><strong>A:</strong> 訪客模式下的資料存於 App 專屬沙盒中，刪除 App 會導致本機資料被系統清除。建議登入帳號以啟用雲端同步守護成果。</p>
+<h3>Q13: 官方代理點數會過期嗎？可以退款嗎？</h3>
+<p><strong>A:</strong> 官方點數永久有效、絕不過期，無任何月租或扣抵時效壓力。退款政策依循 Apple App Store 與 Google Play 雙平台消耗型商品標準規範處理。</p>
+<h3>Q14: 換了新手機，我的點數和自訂牌組會消失嗎？</h3>
+<p><strong>A:</strong> 不會。點數餘額與自訂牌組均安全綁定於你的個人帳號中，只要在新裝置登入相同帳號，即可立即完整還原餘額與所有自訂牌組。</p>
+<h3>Q15: 兩台裝置同時離線修改同一個自訂牌組，同步時會怎樣？</h3>
+<p><strong>A:</strong> 系統以雲端收斂演算法精確裁決：卡片內容衝突以最新修改時間戳（毫秒級）獲勝；而兩台裝置上的所有 SM-2 複習權重、翻卡記錄與熟練度評分將 100% 完整合併保留。</p>
+<h3>Q16: 自備金鑰 (BYOK) 和官方點數代理可以同時啟用嗎？</h3>
+<p><strong>A:</strong> 雙軌為互斥切換設計，每次發起 AI 批改與推論時使用一種模式。你可以隨時在「設定」中無縫切換，兩邊的配置與額度互不干擾，資料絕不互刪。</p>
+<h3>Q17: 官方代理點數是怎麼計費扣款的（微美金制度）？</h3>
+<p><strong>A:</strong> 官方代理以微美金（Micro-USD）計費，契約恆定為 1 點＝$0.001 美元。依每次送出的題幹長度與 AI 生成回覆的實際 Token 數精確扣抵，每次約 0.5 至 3 點（約新台幣 0.02 至 0.1 元），無月租低消。</p>
+<h3>Q18: 題庫更新後，我做到一半或正在練習的題目會受影響嗎？</h3>
+<p><strong>A:</strong> 完全不會。題庫雲端同步採用差量拉取機制，僅補充最新發布試題與勘誤修正，你目前正在作答的題目、草稿與歷史錯題本進度受到完整保護。</p>
+<h3>Q19: 「章節複習」和「題庫練習」直接刷題有什麼不同？</h3>
+<p><strong>A:</strong> 「題庫練習」著重於廣度題目演練與計時模考；而「章節複習」則先提供 108 課綱單元的結構化核心觀念與常見盲點講義，並具備「以教代學總結」、「蘇格拉底深度追問」與定向「章節練習」三閉環導流按鈕，協助你先建構觀念再定向練習。</p>
+<h3>Q20: 為什麼有些章節會顯示「準備中」或 0 題？</h3>
+<p><strong>A:</strong> 為確保講義與試題之最高品質，所有內容均經多階段專業人工審核。少數標記為「準備中」或暫無題目之章節，待雲端審核發布後將自動透過差量更新推送到你的裝置，不影響其他既有單元之正常複習。</p>
+<h3>Q21: 章節導覽頁面頂部出現「課綱已更新」標籤是什麼意思？</h3>
+<p><strong>A:</strong> 當教學團隊在雲端發布了最新課綱觀念補充或章節內容勘誤時，系統會於開機或連網時自動進行差量同步，並於章節頂部顯示提示標籤（例如「課綱已更新 · 更新 3 章」）。點擊標籤或向下拉動畫面刷新即可獲取最新內容。</p>
+<h3>Q22: Web Admin 後台是什麼？學生或家長需要登入嗎？</h3>
+<p><strong>A:</strong> Web Admin 為學測教練營運團隊用於題目審核、勘誤自癒與課綱編修發布的內部管理後台，由營運方核發之管理員帳號登入。學生與家長日常完全不需登入後台，所有通過審核的最新題庫與教材均會自動同步至你的 App 中。</p>
+<hr />
+<h2 id="section-12">12. 108 課綱章節複習導覽</h2>
+<p>依據 108 課綱核心素養導向，學測教練專屬設計了「章節複習」系統，讓學生能在各學科單元中循序建構觀念，並透過科學閉環深化理解。</p>
+<h3>12.1 入口與章節樹導覽</h3>
+<p>進入任何科目的詳細資訊頁後，點擊「章節複習」功能即可開啟該學科完整的 108 課綱樹狀導覽。</p>
+<ul>
+<li><strong>知識架構導覽</strong>：以素養導向為核心，建立系統化認知架構，幫助學生在腦海中快速構築各學科的章節全貌地圖。</li>
+<li><strong>樹狀單元展開</strong>：系統動態依「科目 ➔ 冊次 ➔ 單元章節」三層結構逐層展開，清楚呈現全科知識脈絡與章節進度。各單元支援摺疊與展開狀態記憶，方便專注於攻克中的核心主題。</li>
+<li><strong>動態雲端更新</strong>：系統不寫死靜態課綱冊次清單，所有單元章節皆由教研團隊線上維護並隨雲端差量同步自動保鮮，杜絕紙本手冊的時代差。</li>
+</ul>
+<h4>章節導覽操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="章節導覽介面"><img src="img/ui_chapter_hub.png" alt="章節導覽介面" loading="lazy" /><figcaption>章節導覽介面</figcaption></figure></p>
+<ul>
+<li><strong>① 科目單元展開</strong>：點擊章節即可展開閱讀核心觀念精要，各章節清楚標註重點標籤與核心例題題數。</li>
+<li><strong>② 課綱更新提示</strong>：若雲端發布最新章節修訂或補充，頂部將以微型晶片即時呈現「課綱已更新」狀態，一目了然。</li>
+</ul>
+<h3>12.2 章節重點閱讀</h3>
+<p>點選進入任一章節後，系統呈現精心編撰的五分區結構化講義：</p>
+<ol>
+<li><strong>核心觀念精要</strong>：提煉 108 課綱核心概念與本質思維，剔除冗贅死記，直擊核心本質。</li>
+<li><strong>關鍵公式/文法法規</strong>：清晰收錄標準 LaTeX 語法排版之公式定理與文法法規，確保符號精確。</li>
+<li><strong>常見盲點解析</strong>：直擊歷屆學長姐最容易混淆的邏輯盲區與概念陷阱，提前建立防禦思維。</li>
+<li><strong>易混淆觀念對照</strong>：以結構化表格或條列形式精準對比相似考點，釐清微細辨析維度。</li>
+<li><strong>代表性精選例題</strong>：精選典型試題，特別提醒兩段式互動心法：「先自己想再看簡析，詳解留到卡關時」，杜絕眼高手低的無效刷題。</li>
+</ol>
+<h4>重點閱讀操作畫面示範</h4>
+<p><figure class="concept-diagram" role="img" aria-label="重點閱讀介面"><img src="img/ui_chapter_reader.png" alt="重點閱讀介面" loading="lazy" /><figcaption>重點閱讀介面</figcaption></figure></p>
+<ul>
+<li><strong>① 五分區講義內文</strong>：字級清晰適中，重要定義以粗體與公式標註，支援流暢上下滑動閱讀。</li>
+<li><strong>② 兩段式例題卡片</strong>：折疊收納解析與答題步驟，先動腦思考推導，點擊後才展開詳解與簡析。</li>
+</ul>
+<h3>12.3 一鍵導流三閉環按鈕</h3>
+<p>在章節重點講義底部，常駐「三閉環導流列」，讓你在讀完重點後立即展開輸出驗證：</p>
+<ul>
+<li><strong>以教代學總結</strong>：運用大白話進行費曼輸出論述，由 AI 針對你的因果鏈進行批改診斷，直指論述中的邏輯躍進或語病。AI 批改功能，需官方點數或自備金鑰（詳見 <a href="#section-8">點數與雙軌模式</a>）。</li>
+<li><strong>蘇格拉底深度追問</strong>：針對你尚未想通的盲點展開啟發式對話辨析，透過不劇透的反問層層引導破局。AI 對話功能，需官方點數或自備金鑰（詳見 <a href="#section-8">點數與雙軌模式</a>）。</li>
+<li><strong>章節練習</strong>：純本機離線可用，提供該章節定向 10 題核心精選練習題，即時檢視學習成效。刷題自評與錯題復盤細節請參閱 <a href="#section-6">練習與題庫實戰</a>。</li>
+<li><strong>一鍵收斂閉環</strong>：完成任何一項閉環後，隨時點擊「沉澱為閃卡」，演算法自動將頓悟重點編寫為正反面問答卡片，無縫融入未來的間隔重複隊列。</li>
+</ul>
+<h4>三閉環學習導流示意圖</h4>
+<p><figure class="concept-diagram" role="img" aria-label="章節三閉環導流圖"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="300" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">108 課綱章節複習：三閉環學習導流</text>
+  <text x="300" y="58" text-anchor="middle" font-size="13" fill="#64748b">章節重點閱讀 ➔ 三大閉環實踐 ➔ 沉澱為自訂牌組閃卡納入長時記憶</text>
+
+  <!-- 頂部卡片：章節核心重點閱讀 -->
+  <rect x="180" y="75" width="240" height="56" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="300" y="99" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b21b6">📖 章節核心重點閱讀</text>
+  <text x="300" y="119" text-anchor="middle" font-size="12" fill="#6d28d9">五大分區精要講義 ‧ 兩段式互動心法</text>
+
+  <!-- 分岔箭頭向下 -->
+  <path d="M 300 131 L 300 148 M 125 148 L 475 148 M 125 148 L 125 160 M 300 148 L 300 160 M 475 148 L 475 160" stroke="#94a3b8" stroke-width="2" fill="none"/>
+
+  <!-- 閉環 1：以教代學總結 -->
+  <rect x="35" y="160" width="175" height="88" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="122" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">✍️ 以教代學總結</text>
+  <text x="122" y="208" text-anchor="middle" font-size="12" fill="#1d4ed8">大白話費曼輸出論述</text>
+  <rect x="50" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="122" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">AI 批改 ‧ 點數/金鑰</text>
+
+  <!-- 閉環 2：蘇格拉底深度追問 -->
+  <rect x="212" y="160" width="175" height="88" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">💬 蘇格拉底深度追問</text>
+  <text x="300" y="208" text-anchor="middle" font-size="12" fill="#b45309">對話式辨析觀念盲點</text>
+  <rect x="227" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#fde68a" stroke-width="1"/>
+  <text x="300" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">AI 追問 ‧ 點數/金鑰</text>
+
+  <!-- 閉環 3：章節練習 -->
+  <rect x="390" y="160" width="175" height="88" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+  <text x="477" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">🎯 章節練習</text>
+  <text x="477" y="208" text-anchor="middle" font-size="12" fill="#047857">定向 10 題核心精選</text>
+  <rect x="405" y="218" width="145" height="20" rx="4" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="477" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">本機離線可用 ‧ 零門檻</text>
+
+  <!-- 收斂箭頭向下 -->
+  <path d="M 125 248 L 125 260 M 300 248 L 300 260 M 475 248 L 475 260 M 125 260 L 475 260 M 300 260 L 300 273" stroke="#94a3b8" stroke-width="2" fill="none"/>
+
+  <!-- 底部卡片：沉澱為自訂牌組閃卡 -->
+  <rect x="130" y="275" width="340" height="54" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="300" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">🗂️ 沉澱為自訂牌組閃卡 ‧ 納入 SM-2 排程</text>
+  <text x="300" y="318" text-anchor="middle" font-size="12" fill="#475569">一鍵收斂頓悟精華 ‧ 動態間隔重複長效記憶</text>
+</svg><figcaption>章節三閉環導流圖</figcaption></figure></p>
+<p>完成任何閉環後，更可點擊「沉澱為閃卡」，一鍵將頓悟觀念納入個人化長時記憶循環。</p>
+<h3>12.4 學習法整合迴圈</h3>
+<p>以高中數學 A「平面向量」單元為實戰示範：</p>
+<ul>
+<li><strong>實戰四步驟</strong>：
+<ol>
+<li><strong>讀重點</strong>：閱讀平面向量之加減法幾何意義、內積公式 <math><mrow><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>=</mo><mi>|</mi><mi>a</mi><mi>|</mi><mi>|</mi><mi>b</mi><mi>|</mi><mrow><mspace width="0.1667em"></mspace><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>θ</mi></mrow></math> 與正射影定義。</li>
+<li><strong>費曼輸出</strong>：點擊「以教代學總結」，大白話解釋「為什麼兩垂直向量的內積恆為零」。</li>
+<li><strong>追問補漏</strong>：點擊「蘇格拉底深度追問」，深入探討「內積在物理功與幾何投影上的本質關聯」，化解盲點。</li>
+<li><strong>定向練習</strong>：點擊「章節練習」，本機演練 10 題平面向量精選試題，驗證解題手感。</li>
+</ol>
+</li>
+<li><strong>長效沉澱</strong>：將練習中遇到的關鍵易錯推論點擊「沉澱為閃卡」，納入個人 SM-2 複習排程。</li>
+<li><strong>閉環驗證價值</strong>：傳統複習往往停留於被動「看懂了」，但真正的考場實力源於主動輸出。透過這套整合迴圈，將單向吸收轉化為主動推理，徹底消除盲點。</li>
+</ul>
+<div class="callout callout-tip" role="note">
+
+<p><strong>💡 提示</strong>
+考前 30 天衝刺期建議：「考前 30 天：每天 1 章迴圈一次」，以高頻小閉環全面掃蕩全科盲點。</p>
+
+</div>
+<h3>12.5 課綱更新與下拉刷新</h3>
+<p>為避免過度消耗網路流量與電量，系統在 App 啟動時採用 6 小時節流背景檢查機制：</p>
+<ul>
+<li><strong>節流背景排程</strong>：系統僅在啟動距前次檢查超過 6 小時才連網查詢差量，避免無謂消耗電量與連網資源。</li>
+<li><strong>更新提示晶片</strong>：當雲端發布課綱更新時，章節導覽頁面頂部會浮現微型提示晶片（如「課綱已更新 · 更新 3 章」），點擊即可快速定位最新章節，亦可隨時滑動關閉。</li>
+<li><strong>下拉手動刷新</strong>：隨時在章節樹列表向下拉動，觸發 RefreshIndicator 手動即時刷新，確保教材與雲端即時對齊。個人學習進度受本地守衛保護，同步機制詳見 <a href="#section-9">自訂牌組雲端同步與備份</a> 與 <a href="#section-10">離線同步與資料安全</a>。</li>
+</ul>
+<hr />
+<h2 id="section-13">13. Web Admin 題庫與課綱管理</h2>
+<p>為確保題庫教材與課綱的高標準品質，學測教練建立了 Web Admin 管理後台，由教學營運團隊進行課綱編修、分屏即時預覽與試題審核發布，並具備學生回報自癒機制。</p>
+<h3>13.1 後台定位與登入</h3>
+<p>Web Admin 專為學測教練營運團隊與特聘學科教師打造（帳號需具備管理員權限 role=admin）。本章同時作為學生與家長的透明度承諾，清楚公開試題審核歷程。</p>
+<ul>
+<li><strong>讀者定位</strong>：主要提供教學團隊進行教材編修與試題品管；學生與家長日常無須登入後台，即可享受最專業的內容把關。</li>
+<li><strong>家長與學生視角</strong>：公開後台流程旨在向使用者展示題目審查的高標準，確保題庫與課綱內容嚴肅可靠。</li>
+<li><strong>權限與安全隔離</strong>：嚴格落實角色權限分離（RBAC），僅限已授權的管理員進行題目審核與課綱變更。</li>
+<li><strong>操作審計日誌</strong>：系統自動完整記錄每一筆題目修改與課綱異動的操作時間戳與負責人員，保障數據安全。</li>
+<li><strong>進入方式</strong>：請向營運負責人取得後台網址，以核發的管理員帳號（email＋密碼）登入，系統採用安全憑證維持會話，杜絕未授權存取。</li>
+</ul>
+<h3>13.2 /bank 全量題庫總覽與檢索</h3>
+<p>進入 <code>/bank</code> 題庫總覽頁面，管理團隊可全盤檢閱並維護題庫資產：</p>
+<ul>
+<li><strong>多維分類與快篩</strong>：支援國文、英文、數學 A、數學 B、社會、自然六大科目即時切換；狀態快篩嚴格提供「全部/已上架/待審草稿」等精確狀態切換，並可按章節與題型過濾。</li>
+<li><strong>即時檢索與定位</strong>：內建 300ms 防抖搜尋引擎，支援題幹與關鍵字即時比對；題組題型可一鍵展開文章與子題結構，完整掌控題幹脈絡。</li>
+<li><strong>防抖搜尋體驗</strong>：即時輸入關鍵字時自動啟動 300ms 防抖，兼顧高頻輸入流暢性與後端資料檢索負載。</li>
+<li><strong>題組結構階層</strong>：對於題組題型，可一鍵展開文章引文、閱讀脈絡與各子題配分，方便整體檢驗題目上下文邏輯。</li>
+<li><strong>分頁與高載管理</strong>：支援大數據量流暢瀏覽與單頁筆數切換，提供快速批次指派審核人員。</li>
+<li><strong>URL 導流分享</strong>：支援 <code>/bank?chapter=</code> 與 <code>?qid=</code> 網址參數，方便教研團隊在通訊軟體或內部工單中直接分享特定題目定位。</li>
+</ul>
+<h3>13.3 /curriculum 課綱編修與發布</h3>
+<p>進入 <code>/curriculum</code> 課綱管理頁面，教師可進行教材標準化編審：</p>
+<ul>
+<li><strong>欄位標準化編輯</strong>：完整支援冊次、單元名稱、五分區講義內容、核心例題等 8 大標準欄位編修。</li>
+<li><strong>分屏即時預覽</strong>：右側分屏透過 GptMarkdown 即時渲染 LaTeX 數學公式與層級排版，即時排查語法渲染缺失。</li>
+<li><strong>雲端暫存保全</strong>：編輯內容自動暫存為雲端 pending 狀態，跨裝置不丟失，即使瀏覽器意外關閉也能隨時還原。</li>
+<li><strong>多端暫存同步</strong>：pending 暫存不僅儲存於瀏覽器，更同步至雲端伺服器，教研人員更換電腦亦可無縫接續編輯。</li>
+<li><strong>批次發布確認</strong>：發布時由待發布抽屜面板進行差量比對確認，批次發布後自動按科目版號遞增回饋，確保發布過程原子可靠。</li>
+<li><strong>版號回饋機制</strong>：批次發布成功後，系統自動依科目版號遞增（例如 108 課綱數學 A 課綱版號由 v1 升至 v2），並即時回饋 App 端。</li>
+<li><strong>停用章節警示</strong>：若欲停用特定章節，系統即時計算並警示該章關聯的線上題數，防止學生複習中斷，並支援隨時復啟。</li>
+</ul>
+<h3>13.4 審核工作流與回報自癒</h3>
+<p>所有入庫教材與題目皆歷經嚴謹的六階段審核歷程（草稿 ➔ 初審 ➔ 專家複審 ➔ 校對 ➔ 上架 ➔ 歸檔）：</p>
+<ul>
+<li><strong>多階段品管</strong>：確保每一道試題之題幹、解析、評分規準與考點對齊皆具備教學專業度。</li>
+<li><strong>六階段審核守則</strong>：每一道試題均需完成客觀審題、考點對齊確認與難易度校準，確保入庫題目具備高度鑑別度。</li>
+<li><strong>審核自癒機制</strong>：當學生在 App 題目練習中點擊回報錯誤，累計達 3 票時，系統將觸發自癒守衛，自動將該題目轉入下架修復隊列，由教師進行覆核與修正。</li>
+<li><strong>群眾自癒回饋</strong>：當累積 3 位學生針對同一道題目提出質疑時，系統立刻介入下架，防止瑕疵題目影響更多備考學生。</li>
+<li><strong>歷史修訂追蹤</strong>：完整保留題目與講義之歷史修改紀錄，方便教研團隊回溯每一次勘誤脈絡。</li>
+</ul>
+<div class="callout callout-important" role="note">
+
+<p><strong>✅ 重點</strong>
+題庫由 AI 生成並經人工審核、對齊 108 課綱，不含大考中心歷屆試題原題。</p>
+
+</div>
+<hr />
+<p><em>本手冊由學測教練團隊編撰，陪你一起走過學測備考的每一哩路！</em></p>
+
+    <footer>
+      <p>適用版本: v2.1 ｜ 最後更新: 2026-10-29 ｜ 學測教練雙軌操作手冊</p>
+    </footer>
+  </div>
+</body>
+</html>
